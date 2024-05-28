@@ -12,32 +12,44 @@ Route Layer
 Main Entry File
 
 1. Service Layer
+
 File: auth.services.js
 The service layer contains the business logic for user registration, including validation of the email and password.
 
 Dependencies
+
 email-validator: Validates email addresses.
 password-validator: Validates the password.
 HttpException: Custom error handling.
 
 2. Controller Layer
+
 File: auth.controller.js
+
 The controller layer handles HTTP requests and responses, calling the service layer to perform the actual business logic.
+
 Functionality
+
 register(req, res, next):
 Description: Handles the /register endpoint.
 Request Body: Should contain email and password.
 Response: Returns a success message and the registered user data.
 Error Handling: Passes errors to the next middleware.
 
-3. Route Layer
+4. Route Layer
+
 File: auth.routes.js
+
 The route layer defines the endpoints and maps them to the appropriate controller functions.
+
 Functionality
+
 Endpoint: POST /register
 Description: Registers a new user.
 Handler: Calls the register function from the controller.
 
-4. Main Entry File
+6. Main Entry File
+
 Ensure all dependencies are installed. They include email-validator, password-validator, express and nodemon
+
 To start the server. Use the command "npm run dev"
