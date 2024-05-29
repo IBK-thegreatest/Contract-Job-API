@@ -2,6 +2,11 @@ const express = require("express")
 const authRoute = require("./routes/auth.routes.js")
 const app = express()
 
+//DISPLAY THIS ON THE ROOT FOLDER
+app.get("/", (req, res) => {
+    res.send("Welcome to the Authentication API")
+})
+
 //INITIALIZING MIDDLEWARES
 app.use(express.json())
 app.use("/api/v1/auth", authRoute)
